@@ -11,15 +11,8 @@ jobs:
       contents: read
 
     steps:
-
-      - name: Save state
-        run: echo "{name}={value}" >> $GITHUB_STATE
-
-      - name: Set output
-        run: echo "{name}={value}" >> $GITHUB_OUTPUT
-      
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v1
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1-node16
